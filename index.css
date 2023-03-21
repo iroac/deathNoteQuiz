@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Death Note';
+    src: url('./utils/Death\ Note.ttf') format('truetype');
+  }
+
+body {
+    background-color: #202020;
+    font-family: 'Death Note', sans-serif;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+}
+
+
+.centerdiv {
+    width: 1250px;
+  height: 700px;
+    text-align: center;
+    line-height: 100px;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+.title {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1title {
+    margin: 0;
+    height: 80px;
+}
+
+#firstWordTitle {
+    color: white;
+    font-size: 80px;
+}
+
+
+#lastWordTitle {
+    color: red;
+    font-size: 90px;
+}
+
+#titlesub {
+    color: white;
+    font-size: 25px;
+}
+
+#startbutton {
+    background-color: inherit;
+    font-family: 'Death Note';
+    color: white;
+    border: 0;
+    border-bottom: 1px solid white;
+    font-size: 30px;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+#startbutton:hover {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+#gifhome {
+    margin: 0;
+    width: 100vw;
+}
+
+#gifhomeimg {
+    margin: 0;
+    width: 670px;
+}

@@ -6,28 +6,18 @@
 body {
     background-color: #202020;
     font-family: 'Death Note', sans-serif;
+    height: 100%;
+    padding: 0;
+    margin: 0;
   }
 
 .container {
     display: flex;
     justify-content: center;
   align-items: center;
-}
-
-
-.centerdiv {
-    width: 1250px;
-  height: 700px;
-    text-align: center;
-    line-height: 100px;
-    flex-direction: column;
-    border: 1px solid white;
-}
-
-.title {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  border: 1px solid white;
+  height: 99vh;
 }
 
 .h1title {
@@ -49,6 +39,7 @@ body {
 #titlesub {
     color: white;
     font-size: 25px;
+    padding-top: 30px;
 }
 
 #startbutton {
@@ -58,13 +49,15 @@ body {
     border: 0;
     border-bottom: 1px solid white;
     font-size: 30px;
-    padding-top: 100px;
     padding-bottom: 0;
+    text-decoration: none;
+    padding-top: 150px;
 }
 
 #startbutton:hover {
     color: red;
     border-bottom: 1px solid red;
+    text-decoration: none;
 }
 
 #gifhome {
@@ -74,5 +67,28 @@ body {
 
 #gifhomeimg {
     margin: 0;
-    width: 670px;
+    padding: 0%;
+    width: 200px;
+}
+
+/* Questions styles */
+
+#firstWordQuestion {
+    color: white;
+    font-size: 40px;
+}
+
+#lastWordQuestion {
+    color: red;
+    font-size: 60px;
+}
+
+.titlequestion {
+    padding: 0;
+    margin: 0;
+}
+
+.h1titlequestion {
+    padding: 0;
+    margin: 0;
 }

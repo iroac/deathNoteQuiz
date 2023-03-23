@@ -108,3 +108,12 @@ body {
 #questionh1 {
     color: white;
 }
+
+.options {
+    color: white;
+}
+
+
+.options:hover {
+    color: red;
+}

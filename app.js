@@ -48,10 +48,12 @@ const questions = [
 const nextbutton = document.getElementById('buttonnext')
 const currentquestion = document.getElementById('questionh1')
 const listoptions = document.getElementById('listoptions')
+const optionsLi = document.getElementsByClassName('options')
 
 // Values
 let currentQuestionValue;
 let currentOptionsValue;
+let optionsValueTotal;
 
 
 // Functions
@@ -67,28 +69,35 @@ const renderNextQuestion = () => {
         const question = shuffledQuestions[index];
         index++
 
+        currentOptionsValue = question.options.map(item => {
+            const h3 = document.createElement('h3')
+            h3.classList.add('options')
+            h3.textContent = item[0]
+            return h3
+        });
+
+        if (listoptions.childElementCount > 0) {
+            listoptions.innerHTML = '';
+        }
+
+        currentOptionsValue.forEach(item => {
+            listoptions.appendChild(item)
+        })
+
         // Update the current value
-        currentQuestionValue = question.question
-        currentquestion.innerHTML = currentQuestionValue
-        currentOptionsValue = question.options
+        currentquestion.innerHTML = question.question
+        optionsValueTotal = question.options
 
-        console.log(currentOptionsValue[0][0])
-
+        console.log(optionsValueTotal)
 
     } else {
         console.log('Game finish')
     }
 }
 
-// let optionsRendered = currentOptionsValue.map(item => {
-//     const li = document.createElement('li')
-//     li.textContent = item[0]
-//     return li
-// });
 
-// optionsRendered.forEach(item => {
-//     listoptions.appendChild(item)
-// })
+
+
 
 
 // Event Listeners

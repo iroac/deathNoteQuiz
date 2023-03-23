@@ -51,7 +51,6 @@ body {
     font-size: 30px;
     padding-bottom: 0;
     text-decoration: none;
-    padding-top: 150px;
 }
 
 #startbutton:hover {
@@ -71,7 +70,20 @@ body {
     width: 200px;
 }
 
+#starthome {
+    padding-top: 150px;
+}
+
 /* Questions styles */
+
+.containerquestion {
+    display: flex;
+    justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  height: 99vh;
+}
 
 #firstWordQuestion {
     color: white;
@@ -91,4 +103,8 @@ body {
 .h1titlequestion {
     padding: 0;
     margin: 0;
+}
+
+#questionh1 {
+    color: white;
 }

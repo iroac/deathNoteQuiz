@@ -117,3 +117,11 @@ body {
 .options:hover {
     color: red;
 }
+
+#submitbutton {
+    display: none;
+}
+
+#buttonnext {
+    display: none;
+}

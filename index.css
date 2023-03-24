@@ -77,12 +77,30 @@ body {
 /* Questions styles */
 
 .containerquestion {
-    display: flex;
-    justify-content: start;
-  align-items: center;
-  flex-direction: column;
   border: 1px solid white;
   height: 99vh;
+}
+
+#logodiv {
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#questiondiv {
+    margin-top: 50px;
+    margin-left: 100px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#buttondiv {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-right: 50px;
 }
 
 #firstWordQuestion {
@@ -107,21 +125,43 @@ body {
 
 #questionh1 {
     color: white;
+    font-size: 50px;
 }
 
 .options {
     color: white;
-}
-
-
-.options:hover {
-    color: red;
+    font-size: 30px;
+    cursor:pointer;
 }
 
 #submitbutton {
     display: none;
+    background-color: inherit;
+    font-family: 'Death Note';
+    color: white;
+    border: 0;
+    font-size: 30px;
+    padding-bottom: 0;
+    text-decoration: none;
+    cursor:pointer;
 }
 
 #buttonnext {
     display: none;
+    background-color: inherit;
+    font-family: 'Death Note';
+    color: white;
+    border: 0;
+    font-size: 30px;
+    padding-bottom: 0;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+#buttonnext:hover {
+    color: red;   
+}
+
+#submitbutton:hover {
+    color: red;
 }

@@ -53,7 +53,9 @@ const submitbutton = document.getElementById('submitbutton')
 // Values
 let currentQuestionValue;
 let currentOptionsValue;
-let optionsValueTotal;
+let selectitem;
+let currentScore = 0;
+let currentOptionScore;
 
 
 // Functions
@@ -78,32 +80,18 @@ const renderNextQuestion = () => {
             h3.textContent = item[0]
 
             h3.addEventListener('click', event => {
-                document.querySelectorAll('.options').forEach(option => {
-                    option.style.color = '';
-                });
-
-
                 if (nextbutton.style.display === 'none') {
+                    document.querySelectorAll('.options').forEach(option => {
+                        option.style.color = '';
+                    });
+
+
+
                     event.target.style.color = 'red'
                     submitbutton.style.display = 'block'
+                    selectitem = event.target.innerHTML
                 }
             })
-
-            // if (nextbutton.style.display === 'none') {
-
-            //     h3.addEventListener('mouseover', event => {
-            //         document.querySelectorAll('.options').forEach(option => {
-            //             option.style.color = '';
-            //         });
-
-
-
-            //         event.target.style.color = 'red'
-
-            //     })
-
-            // }
-
 
 
             return h3
@@ -119,18 +107,46 @@ const renderNextQuestion = () => {
             listoptions.appendChild(item)
         })
 
-
         submitbutton.addEventListener('click', () => {
             nextbutton.style.display = 'block'
             submitbutton.style.display = 'none'
+            listoptions.innerHTML = '';
+
+            question.options.map(item => {
+                let option = item[0];
+                let value = item[1];
+
+                if (selectitem === option && value) {
+                    console.log(selectitem, option)
+                    currentScore += 1;
+                    currentOptionScore = true
+                } else {
+                    currentOptionScore = false
+                }
+
+                if (value) {
+                    let h3Element = document.createElement('h3')
+                    h3Element.textContent = option + ' true'
+                    h3Element.style.color = 'aquamarine'
+                    h3Element.style.fontSize = '30px'
+                    listoptions.appendChild(h3Element)
+                } else {
+                    let h3Element = document.createElement('h3')
+                    h3Element.textContent = option + ' false'
+                    h3Element.style.color = 'red'
+                    h3Element.style.fontSize = '30px'
+                    listoptions.appendChild(h3Element)
+                }
+
+            })
+
+
         })
 
         // Update the current question
         currentquestion.innerHTML = question.question
         // Store the current options arrays with the boolean
-        optionsValueTotal = question.options
-
-        console.log(optionsValueTotal)
+        console.log(currentScore)
 
     } else {
         console.log('Game finish')

@@ -49,6 +49,9 @@ const nextbutton = document.getElementById('buttonnext')
 const currentquestion = document.getElementById('questionh1')
 const listoptions = document.getElementById('listoptions')
 const submitbutton = document.getElementById('submitbutton')
+const lThinking = document.getElementById('lthinking')
+const rightGif = document.getElementById('gifrightanswer')
+const loseGif = document.getElementById('gifLose')
 
 // Values
 let currentQuestionValue;
@@ -89,6 +92,7 @@ const renderNextQuestion = () => {
 
                     event.target.style.color = 'red'
                     submitbutton.style.display = 'block'
+                    lThinking.style.display = 'block'
                     selectitem = event.target.innerHTML
                 }
             })
@@ -110,6 +114,7 @@ const renderNextQuestion = () => {
         submitbutton.addEventListener('click', () => {
             nextbutton.style.display = 'block'
             submitbutton.style.display = 'none'
+            lThinking.style.display = 'none'
             listoptions.innerHTML = '';
 
             question.options.map(item => {
@@ -126,19 +131,27 @@ const renderNextQuestion = () => {
 
                 if (value) {
                     let h3Element = document.createElement('h3')
-                    h3Element.textContent = option + ' true'
+                    h3Element.textContent = option
                     h3Element.style.color = 'aquamarine'
                     h3Element.style.fontSize = '30px'
                     listoptions.appendChild(h3Element)
                 } else {
                     let h3Element = document.createElement('h3')
-                    h3Element.textContent = option + ' false'
+                    h3Element.textContent = option
                     h3Element.style.color = 'red'
                     h3Element.style.fontSize = '30px'
                     listoptions.appendChild(h3Element)
                 }
 
             })
+
+            if (currentOptionScore) {
+                console.log('right question')
+                rightGif.style.display = 'block'
+            } else {
+                console.log('wrong one dude')
+                loseGif.style.display = 'block'
+            }
 
 
         })

@@ -78,7 +78,7 @@ body {
 
 .containerquestion {
   border: 1px solid white;
-  height: 99vh;
+  height: 100%;
 }
 
 #logodiv {
@@ -88,11 +88,18 @@ body {
 }
 
 #questiondiv {
-    margin-top: 50px;
     margin-left: 100px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+}
+
+#questionTitle {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-top: 40px;
 }
 
 #buttondiv {
@@ -100,7 +107,7 @@ body {
     align-items: flex-end;
     justify-content: end;
     flex-direction: row;
-    margin-top: 130px;
+    margin-top: 42%;
     margin-right: 10px;
 }
 
@@ -177,6 +184,12 @@ body {
     height: 90px;
 }
 
+#rightAnswerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
 
 #gifrightanswer {
     display: none;
@@ -187,4 +200,28 @@ body {
 #gifLose {
     display: none;
     height: 90px;
+}
+
+#riukdance {
+    display: none;
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+#riukdancediv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+
+/* Final page */
+
+#textFinal {
+    color: white;
+}
+
+#captionFinal {
+    color: white;
 }

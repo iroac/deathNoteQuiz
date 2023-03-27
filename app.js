@@ -52,14 +52,16 @@ const submitbutton = document.getElementById('submitbutton')
 const lThinking = document.getElementById('lthinking')
 const rightGif = document.getElementById('gifrightanswer')
 const loseGif = document.getElementById('gifLose')
+const riukDance = document.getElementById('riukdance')
+
 
 // Values
 let currentQuestionValue;
 let currentOptionsValue;
 let selectitem;
 let currentScore = 0;
-let currentOptionScore;
-
+// const finaltext = document.getElementById('textFinal')
+// finaltext.innerText = `${currentScore}/10`;
 
 // Functions
 const shuffledQuestions = [...questions]
@@ -75,6 +77,11 @@ const renderNextQuestion = () => {
         index++
 
         nextbutton.style.display = 'none'
+        loseGif.style.display = 'none'
+        riukDance.style.display = 'none'
+        rightGif.style.display = 'none'
+
+
 
         // Gerenate the options
         currentOptionsValue = question.options.map(item => {
@@ -122,11 +129,14 @@ const renderNextQuestion = () => {
                 let value = item[1];
 
                 if (selectitem === option && value) {
-                    console.log(selectitem, option)
+                    console.log(selectitem, option, value)
                     currentScore += 1;
-                    currentOptionScore = true
-                } else {
-                    currentOptionScore = false
+
+                    rightGif.style.display = 'block'
+                } else if (selectitem === option && !value) {
+                    console.log(selectitem, option, value)
+                    loseGif.style.display = 'block'
+                    riukDance.style.display = 'block'
                 }
 
                 if (value) {
@@ -145,24 +155,16 @@ const renderNextQuestion = () => {
 
             })
 
-            if (currentOptionScore) {
-                console.log('right question')
-                rightGif.style.display = 'block'
-            } else {
-                console.log('wrong one dude')
-                loseGif.style.display = 'block'
-            }
-
 
         })
 
         // Update the current question
         currentquestion.innerHTML = question.question
         // Store the current options arrays with the boolean
-        console.log(currentScore)
 
     } else {
-        console.log('Game finish')
+        console.log(currentScore)
+        window.location.href = "final.html";
     }
 }
 
@@ -173,6 +175,7 @@ const renderNextQuestion = () => {
 // Event Listeners
 window.addEventListener('load', renderNextQuestion)
 nextbutton.addEventListener('click', renderNextQuestion)
+
 
 
 // Event Listeners on Classes

@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Death Note Quiz</title>
+    <title>Questions</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script src="app.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div id="container">
       <img id="gifhomeimg" src="./utils/dancedeathnote.gif" alt="Home GIF" />
       <h1 class="h1title">
         <span id="firstWordTitle">Death Note</span>
@@ -19,8 +18,49 @@
         the human who fails this test will have his name written in the book
       </span>
       <div id="starthome">
-        <a href="questions.html" id="startbutton">START NOW</a>
+        <button id="startbutton">START NOW</button>
+      </div>
+    </div>
+
+    <div id="containerquestion">
+      <div id="logodiv">
+        <div class="titlequestion">
+          <h1 class="h1titlequestion">
+            <span id="firstWordQuestion">Death Note</span>
+            <span id="lastWordQuestion">QUIZ</span>
+          </h1>
+        </div>
+      </div>
+
+      <div id="questionTitle">
+        <h1 id="textFinal"></h1>
+        <h1 id="questionh1"></h1>
+        <div id="riukdancediv">
+          <img id="riukdance" src="./utils/riukdance.gif" alt="Riuk dance" />
+        </div>
+      </div>
+
+      <div id="questiondiv">
+        <h3 id="captionFinal">Some text here</h3>
+        <div id="listoptions"></div>
+      </div>
+
+      <div id="buttondiv">
+        <div id="rightAnswerDiv">
+          <img
+            id="gifrightanswer"
+            src="./utils/dancedeathnote.gif"
+            alt="Dance Death Note Characters"
+          />
+        </div>
+        <img id="gifLose" src="./utils/LL.gif" alt="L idiot" />
+        <button id="buttonnext">Next</button>
+        <button id="submitbutton">Submit</button>
+        <div>
+          <img id="lthinking" src="./utils/lthinking.png" alt="L thinking" />
+        </div>
       </div>
     </div>
   </body>
+  <script src="app.js"></script>
 </html>

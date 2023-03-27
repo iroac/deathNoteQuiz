@@ -11,7 +11,7 @@ body {
     margin: 0;
   }
 
-.container {
+#container {
     display: flex;
     justify-content: center;
   align-items: center;
@@ -76,9 +76,10 @@ body {
 
 /* Questions styles */
 
-.containerquestion {
+#containerquestion {
   border: 1px solid white;
   height: 100%;
+  display: none;
 }
 
 #logodiv {

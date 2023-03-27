@@ -55,6 +55,9 @@ const loseGif = document.getElementById('gifLose')
 const riukDance = document.getElementById('riukdance')
 const finaltext = document.getElementById('textFinal')
 const captionFinal = document.getElementById('captionFinal')
+const startbutton = document.getElementById('startbutton')
+const containerquestion = document.getElementById('containerquestion')
+const container = document.getElementById('container')
 
 
 // Values
@@ -62,6 +65,7 @@ let currentQuestionValue;
 let currentOptionsValue;
 let selectitem;
 let currentScore = 0;
+let teststart = false;
 
 // Functions
 const shuffledQuestions = [...questions]
@@ -160,6 +164,7 @@ const renderNextQuestion = () => {
 
         // Update the current question
         currentquestion.innerHTML = question.question
+        // teststart = true
         // Store the current options arrays with the boolean
 
     } else {
@@ -193,6 +198,7 @@ const renderNextQuestion = () => {
         lThinking.style.display = 'none'
         nextbutton.style.display = 'none'
         submitbutton.style.display = 'none'
+        teststart = false
     }
 }
 
@@ -201,9 +207,19 @@ const renderNextQuestion = () => {
 
 
 // Event Listeners
-window.addEventListener('load', renderNextQuestion)
+startbutton.addEventListener('click', () => {
+    teststart = true
+    container.style.display = 'none'
+    containerquestion.style.display = 'block'
+    renderNextQuestion()
+})
 nextbutton.addEventListener('click', renderNextQuestion)
-
+window.addEventListener('beforeunload', (event) => {
+    if (teststart) {
+        event.preventDefault();
+        event.returnValue = "";
+    }
+})
 
 
 // Event Listeners on Classes

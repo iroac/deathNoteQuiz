@@ -329,3 +329,19 @@ body {
     } 
 
 }
+
+
+@media (max-width: 260px ) {
+
+    #firstWordTitle {
+        color: white;
+        font-size: 30px;
+    }
+    
+    
+    #lastWordTitle {
+        color: red;
+        font-size: 40px;
+    } 
+
+}

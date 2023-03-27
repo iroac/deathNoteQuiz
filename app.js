@@ -53,6 +53,8 @@ const lThinking = document.getElementById('lthinking')
 const rightGif = document.getElementById('gifrightanswer')
 const loseGif = document.getElementById('gifLose')
 const riukDance = document.getElementById('riukdance')
+const finaltext = document.getElementById('textFinal')
+const captionFinal = document.getElementById('captionFinal')
 
 
 // Values
@@ -60,8 +62,6 @@ let currentQuestionValue;
 let currentOptionsValue;
 let selectitem;
 let currentScore = 0;
-// const finaltext = document.getElementById('textFinal')
-// finaltext.innerText = `${currentScore}/10`;
 
 // Functions
 const shuffledQuestions = [...questions]
@@ -164,7 +164,35 @@ const renderNextQuestion = () => {
 
     } else {
         console.log(currentScore)
-        window.location.href = "final.html";
+        // Display Final Content
+        finaltext.innerText = `${currentScore}/${questions.length}`;
+        if (currentScore === questions.length) {
+            loseGif.style.display = 'none'
+            riukDance.style.display = 'none'
+            rightGif.style.display = 'block'
+            captionFinal.innerHTML = "Perfert! You are truly a Death Note fan, your name won't be write instend riuk gotta come tonight and give a oportunity to change this world, we count with you"
+        } else if (currentScore >= questions.length / 2) {
+            loseGif.style.display = 'none'
+            riukDance.style.display = 'none'
+            rightGif.style.display = 'block'
+            captionFinal.innerHTML = "Not bad! You are a regular fan, you are safe to go now. Please rewatch it'll maybe it help levage your IQ"
+        } else {
+            rightGif.style.display = 'none'
+            riukDance.style.display = 'block'
+            loseGif.style.display = 'block'
+            captionFinal.innerHTML = "You are disgusting, how can someone say the watch it and score so low, waht a shame. Please leave. KIRA will find you in some days just wait to your death now"
+        }
+
+        // Final elements
+        finaltext.style.display = 'block'
+        captionFinal.style.display = 'block'
+
+        // Question elements
+        listoptions.style.display = 'none'
+        currentquestion.style.display = 'none'
+        lThinking.style.display = 'none'
+        nextbutton.style.display = 'none'
+        submitbutton.style.display = 'none'
     }
 }
 

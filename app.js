@@ -103,6 +103,7 @@ const riukDance = document.getElementById('riukdance')
 const finaltext = document.getElementById('textFinal')
 const captionFinal = document.getElementById('captionFinal')
 const startbutton = document.getElementById('startbutton')
+const restartButton = document.getElementById('restartbutton')
 const containerquestion = document.getElementById('containerquestion')
 const container = document.getElementById('container')
 
@@ -237,7 +238,7 @@ const renderNextQuestion = () => {
         // Final elements
         finaltext.style.display = 'block'
         captionFinal.style.display = 'block'
-
+        restartButton.style.display = 'block'
         // Question elements
         listoptions.style.display = 'none'
         currentquestion.style.display = 'none'
@@ -258,6 +259,9 @@ startbutton.addEventListener('click', () => {
     container.style.display = 'none'
     containerquestion.style.display = 'flex'
     renderNextQuestion()
+})
+restartButton.addEventListener('click', () => {
+    location.reload()
 })
 nextbutton.addEventListener('click', renderNextQuestion)
 window.addEventListener('beforeunload', (event) => {

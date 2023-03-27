@@ -165,6 +165,20 @@ body {
     padding-right: 10px;
 }
 
+
+#restartbutton {
+    display: none;
+    background-color: inherit;
+    font-family: 'Death Note';
+    color: white;
+    border: 0;
+    font-size: 30px;
+    text-decoration: none;
+    cursor:pointer;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
 #buttonnext {
     display: none;
     background-color: inherit;
@@ -232,11 +246,13 @@ body {
 #textFinal {
     color: white;
     display: none;
+    font-size: 80px;
 }
 
 #captionFinal {
     color: white;
     display: none;
+    font-size: 50px;
 }
 
 

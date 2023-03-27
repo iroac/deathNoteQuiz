@@ -3,43 +3,90 @@
 // Questions array of objects
 const questions = [
     {
-        question: 'What is your name',
+        question: 'What happens if you tear a page from a death note?',
         options: [
-            ['A) Vinicius', true],
-            ['B) Olinda', false],
-            ['C) João', false]
+            ["A) Death Note loses it's power", false],
+            ['B) The page works the same as the book it was torn from', true],
+            ['C) You die', false],
+            ['D) The notebook catches fire and burns up', false]
         ]
     },
     {
-        question: 'How old are yoy',
+        question: 'How many pages are in a Death Note?',
         options: [
-            ['A) 18 years old', false],
-            ['B) 16 years old', false],
-            ['C) 21 years old', true]
+            ['A) 666', false],
+            ['B) 1.000', false],
+            ['C) Infinite', true],
+            ['C) One for each year remaining in your life', false]
         ]
     },
     {
-        question: 'Are you a programming',
+        question: 'What is the minimu age someone has to be to be killed by the death note?',
         options: [
-            ['A) No yet, but soon', false],
-            ['B) No, but my brother is', false],
-            ['C) Yes, but not what a normal one', true]
+            ['A) There is no minimum', false],
+            ['B) 780 days old', true],
+            ['C) 2 years old', false]
         ]
     },
     {
-        question: 'Do you have any brother alive?',
+        question: 'What is the only thing that can kill a shinigami?',
         options: [
-            ['A) No all already die', false],
-            ['B) Just 3 of 9 that i had', false],
-            ['C) I really dont care', true]
+            ["A) Saving a humam's life", true],
+            ['B) Writing their name in the Death Note', false],
+            ['C) they do not die', false]
         ]
     },
     {
-        question: 'Did you buy a house?',
+        question: 'What must be sacrificed in order to use the power of shinigami eyes',
         options: [
-            ['A) Yes, last mouth', false],
-            ['B) No, I always rent', false],
-            ['C) No, my more owns one instend', true]
+            ['A) The life of a loved one', false],
+            ['B) Your natural sight', false],
+            ['C) Half your life expectancy', true]
+        ]
+    },
+    {
+        question: 'What do you need to do to see the shinigami owner of a Death Note?',
+        options: [
+            ['A) Simply touch the Death Note', true],
+            ['B) Kill your first victim with the Death Note', false],
+            ["C) Write the shinigami's name three times", false],
+            ["D) offer the shinigami an apple", false],
+        ]
+    },
+    {
+        question: 'Unless otherwide specified, how does someone die once added their name to the Death Note?',
+        options: [
+            ['A) In an accident', false],
+            ['B) They just disappear', false],
+            ['C) from a heart attack', true],
+            ['D) A death god comes to take them', false]
+        ]
+    },
+    {
+        question: 'What do you need when you add someone to the Death Note?',
+        options: [
+            ['A) Their first, middle and last name', false],
+            ['B) Only their name', false],
+            ['C) Their name and their face', true],
+            ['D) Ther full name, photo id, and last two pay stubs', false]
+        ]
+    },
+    {
+        question: 'Who did the original Death Note belong to?',
+        options: [
+            ['A) It had no owner', false],
+            ['B) It fell from heaven', false],
+            ['C) Ryuk, the shinigami', true],
+            ['C) A wizard', false]
+        ]
+    },
+    {
+        question: 'What is a shinigami?',
+        options: [
+            ['A) A god of death', true],
+            ['B) An other-wordly monster', false],
+            ['C) An Alien', false],
+            ['C) A soul in pain', false]
         ]
     }
 ]
@@ -145,15 +192,15 @@ const renderNextQuestion = () => {
 
                 if (value) {
                     let h3Element = document.createElement('h3')
+                    h3Element.classList.add('optionsanswer')
                     h3Element.textContent = option
                     h3Element.style.color = 'aquamarine'
-                    h3Element.style.fontSize = '30px'
                     listoptions.appendChild(h3Element)
                 } else {
                     let h3Element = document.createElement('h3')
+                    h3Element.classList.add('optionsanswer')
                     h3Element.textContent = option
                     h3Element.style.color = 'red'
-                    h3Element.style.fontSize = '30px'
                     listoptions.appendChild(h3Element)
                 }
 
@@ -168,10 +215,9 @@ const renderNextQuestion = () => {
         // Store the current options arrays with the boolean
 
     } else {
-        console.log(currentScore)
         // Display Final Content
         finaltext.innerText = `${currentScore}/${questions.length}`;
-        if (currentScore === questions.length) {
+        if (currentScore === questions.length || currentScore >= questions.length - 2) {
             loseGif.style.display = 'none'
             riukDance.style.display = 'none'
             rightGif.style.display = 'block'
@@ -210,7 +256,7 @@ const renderNextQuestion = () => {
 startbutton.addEventListener('click', () => {
     teststart = true
     container.style.display = 'none'
-    containerquestion.style.display = 'block'
+    containerquestion.style.display = 'flex'
     renderNextQuestion()
 })
 nextbutton.addEventListener('click', renderNextQuestion)
@@ -220,9 +266,6 @@ window.addEventListener('beforeunload', (event) => {
         event.returnValue = "";
     }
 })
-
-
-// Event Listeners on Classes
 
 
 

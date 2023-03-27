@@ -22,7 +22,7 @@ body {
 
 .h1title {
     margin: 0;
-    height: 80px;
+   min-height: 80px;
 }
 
 #firstWordTitle {
@@ -40,6 +40,7 @@ body {
     color: white;
     font-size: 25px;
     padding-top: 30px;
+    text-align: center;
 }
 
 #startbutton {
@@ -77,8 +78,9 @@ body {
 /* Questions styles */
 
 #containerquestion {
+  flex-direction: column;
   border: 1px solid white;
-  height: 100%;
+  min-height: 99vh;
   display: none;
 }
 
@@ -108,8 +110,10 @@ body {
     align-items: flex-end;
     justify-content: end;
     flex-direction: row;
-    margin-top: 42%;
     margin-right: 10px;
+    align-self: flex-end;
+    flex-grow: 1;
+    width: 100vw;
 }
 
 #firstWordQuestion {
@@ -139,6 +143,11 @@ body {
 
 .options {
     color: white;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+.optionsanswer {
     font-size: 30px;
     cursor:pointer;
 }
@@ -195,6 +204,7 @@ body {
 #gifrightanswer {
     display: none;
     height: 90px;
+    justify-content: center;
 }
 
 
@@ -227,4 +237,54 @@ body {
 #captionFinal {
     color: white;
     display: none;
+}
+
+
+@media ( max-width: 600px ) {
+
+    #firstWordTitle {
+        color: white;
+        font-size: 50px;
+    }
+    
+    
+    #lastWordTitle {
+        color: red;
+        font-size: 60px;
+    }
+
+
+#titlesub {
+    font-size: 20px;
+    padding-top: 0;
+}
+    
+#questionTitle {
+    margin-left: 10px;
+}
+
+#questiondiv {
+    margin-left: 10px;
+}
+
+#questionh1 {
+    font-size: 30px;
+}
+
+.options {
+    font-size: 25px;
+}
+
+#buttonnext {
+    padding-right: 10px;
+}
+
+.optionsanswer {
+    font-size: 25px;
+}
+
+#submitbutton {
+    padding-right: 10px;
+}
+
 }

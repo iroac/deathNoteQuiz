@@ -319,6 +319,22 @@ body {
 
     #firstWordTitle {
         color: white;
+        font-size: 35px;
+    }
+    
+    
+    #lastWordTitle {
+        color: red;
+        font-size: 45px;
+    } 
+
+}
+
+
+@media (max-width: 260px ) {
+
+    #firstWordTitle {
+        color: white;
         font-size: 30px;
     }
     

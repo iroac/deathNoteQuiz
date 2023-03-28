@@ -27,13 +27,13 @@ body {
 
 #firstWordTitle {
     color: white;
-    font-size: 40px;
+    font-size: 70px;
 }
 
 
 #lastWordTitle {
     color: red;
-    font-size: 60px;
+    font-size: 90px;
 }
 
 #titlesub {
@@ -259,7 +259,7 @@ body {
 @media ( max-width: 600px ) {
 
     #firstWordTitle {
-        font-size: 50px;
+        font-size: 40px;
     }
     
     

@@ -21,7 +21,11 @@ body {
 }
 
 .h1title {
+    display: flex;
+    justify-content: center;
+  align-items: center;
     margin: 0;
+   width: 100vw;
 }
 
 #firstWordTitle {
@@ -334,13 +338,13 @@ body {
 
     #firstWordTitle {
         color: white;
-        font-size: 30px;
+        font-size: 25px;
     }
     
     
     #lastWordTitle {
         color: red;
-        font-size: 40px;
+        font-size: 30px;
     } 
 
 }

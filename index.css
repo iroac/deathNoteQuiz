@@ -319,13 +319,13 @@ body {
 
 @media (max-width: 350px ) {
 
-    #firstWordTitle {
+#firstWordTitle {
         color: white;
         font-size: 35px;
     }
     
     
-    #lastWordTitle {
+#lastWordTitle {
         color: red;
         font-size: 45px;
     } 

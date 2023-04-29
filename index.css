@@ -12,96 +12,98 @@ body {
   }
 
 #container {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-border: 1px solid white;
-height: 99vh;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  height: 99vh;
 }
 
 .h1title {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+    margin: 0;
 }
 
 #firstWordTitle {
     color: white;
-    font-size: 40px;
+    font-size: 80px;
+    margin: 0;
 }
 
 
 #lastWordTitle {
     color: red;
-    font-size: 60px;
+    font-size: 90px;
+    margin: 0;
 }
 
 #titlesub {
-color: white;
-font-size: 25px;
-padding-top: 30px;
-text-align: center;
+    color: white;
+    font-size: 25px;
+    padding-top: 30px;
+    text-align: center;
 }
 
 #startbutton {
-background-color: inherit;
-font-family: 'Death Note';
-color: white;
-border: 0;
-border-bottom: 1px solid white;
-font-size: 30px;
-padding-bottom: 0;
-text-decoration: none;
+    background-color: inherit;
+    font-family: 'Death Note';
+    color: white;
+    border: 0;
+    border-bottom: 1px solid white;
+    font-size: 30px;
+    padding-bottom: 0;
+    text-decoration: none;
 }
 
 #startbutton:hover {
-color: red;
-border-bottom: 1px solid red;
-text-decoration: none;
+    color: red;
+    border-bottom: 1px solid red;
+    text-decoration: none;
 }
 
 #gifhome {
-margin: 0;
-width: 100vw;
+    margin: 0;
+    width: 100vw;
 }
 
 #gifhomeimg {
-margin: 0;
-padding: 0%;
-width: 200px;
+    margin: 0;
+    padding: 0%;
+    width: 200px;
 }
 
 #starthome {
-padding-top: 150px;
+    padding-top: 150px;
 }
 
 /* Questions styles */
 
 #containerquestion {
-flex-direction: column;
-border: 1px solid white;
-min-height: 99vh;
-display: none;
+  flex-direction: column;
+  border: 1px solid white;
+  min-height: 99vh;
+  display: none;
 }
 
 #logodiv {
-display: flex;
-align-items: center;
-flex-direction: column;
+    display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #questiondiv {
-margin-left: 100px;
-display: flex;
-align-items: flex-start;
-flex-direction: column;
+    margin-left: 100px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 #questionTitle {
-display: flex;
-align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
     flex-direction: row;
     margin-left: 100px;
     margin-top: 40px;
@@ -261,7 +263,7 @@ align-items: flex-start;
 @media ( max-width: 600px ) {
 
 #firstWordTitle {
-        font-size: 40px;
+        font-size: 50px;
     }
     
     
@@ -301,7 +303,6 @@ align-items: flex-start;
 
 #submitbutton {
     padding-right: 10px;
-    
 }
 
 #textFinal {
@@ -319,7 +320,7 @@ align-items: flex-start;
 @media (max-width: 350px ) {
 
 #firstWordTitle {
-        color: red;
+        color: white;
         font-size: 35px;
     }
     

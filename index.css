@@ -28,16 +28,26 @@ margin: 0;
 }
 
 #firstWordTitle {
+<<<<<<< HEAD
 color: white;
 font-size: 80px;
 margin: 0;
+=======
+    color: white;
+    font-size: 40px;
+>>>>>>> parent of 500f1bc... remove spaces on css file
 }
 
 
 #lastWordTitle {
+<<<<<<< HEAD
 color: red;
 font-size: 90px;
 margin: 0;
+=======
+    color: red;
+    font-size: 60px;
+>>>>>>> parent of 500f1bc... remove spaces on css file
 }
 
 #titlesub {
@@ -262,14 +272,19 @@ align-items: flex-start;
 
 @media ( max-width: 600px ) {
 
+<<<<<<< HEAD
 #firstWordTitle {
         font-size: 50px;
+=======
+    /* #firstWordTitle {
+        font-size: 40px;
+>>>>>>> parent of 500f1bc... remove spaces on css file
     }
     
     
-#lastWordTitle {
+    #lastWordTitle {
         font-size: 60px;
-    }
+    } */
 
 
 #titlesub {
